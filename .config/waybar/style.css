@@ -1,0 +1,229 @@
+/* -- Global rules -- */
+/*
+* {
+  border: none;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 15px;
+  min-height: 10px;
+}*/
+* {
+    font-family: "Terminus (TTF)", "Terminess Nerd Font", monospace;
+    font-size: 18px;
+    min-height: 14px;
+}
+window#waybar {
+  background: rgba(34, 36, 54, 0.6);
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* - Genera rules for visible modules -- */
+#custom-archicon,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#battery,
+#pulseaudio,
+#pulseaudio-slider,
+#network, 
+#custom-ime {
+  color: #161320;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
+}
+
+/* Separation to the left */
+#custom-archicon,
+#cpu,
+#battery {
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Separation to the rigth */
+#clock,
+#temperature,
+#custom-ime {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* -- Specific styles -- */
+
+/* Modules left */
+#custom-archicon {
+  font-size: 20px;
+  color: #89B4FA;
+  background: #161320;
+  padding-right: 17px;
+}
+
+#clock {
+  background: #ABE9B3;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#cpu {
+  background: #96CDFB;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#memory {
+  background: #DDB6F2;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+#disk {
+  background: #F5C2E7;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+#temperature {
+  background: #F8BD96;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+/* Left modules */
+#custom-archicon {
+  font-size: 20px;
+  color: #C2A98B;
+  background: #3A3F4B;
+  padding-right: 17px;
+}
+
+#clock {
+  background: #8A735C;
+  color: #ECE4DA;
+}
+
+#cpu {
+  background: #6B6F78;
+  color: #ECE4DA;
+}
+
+#memory {
+  background: #5E546E;
+  color: #ECE4DA;
+}
+
+#disk {
+  background: #3A3F4B;
+  color: #C2A98B;
+}
+
+#temperature {
+  background: #9DA9B5;
+  color: #2B2E36;
+}
+
+/* Modules center */
+
+#workspaces {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0px 6px;
+}
+
+#workspaces button {
+  color: #C2A98B;
+  background: transparent;
+  padding: 4px 4px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#workspaces button.occupied {
+  color: #A6E3A1;
+}
+
+#workspaces button.active {
+  color: #89B4FA;
+  text-shadow: 0 0 4px #ABE9B3;
+}
+
+#workspaces button:hover {
+  color: #89B4FA;
+}
+
+#workspaces button.active:hover {}
+
+/* Modules right */
+#taskbar {
+  background: transparent;
+  border-radius: 10px;
+  padding: 0px 5px;
+  margin: 6px 5px;
+}
+
+#taskbar button {
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+#taskbar button.active {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#taskbar button:hover {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#battery {
+  background: #8A735C;
+  color: #ECE4DA;
+  padding-right: 15px;
+}
+
+#pulseaudio {
+  min-width: 55px;
+  background: #6B6F78;
+  color: #ECE4DA;
+}
+
+#pulseaudio-slider {
+  color: #8A735C;
+  background: #9DA9B5;
+  min-width: 50px;
+}
+
+#pulseaudio-slider slider {
+  color: #8A735C;
+}
+
+
+#network {
+  background: #5E546E;
+  color: #ECE4DA;
+}
+
+#custom-ime {
+  background: #C2A98B;
+  color: #2B2E36;
+  padding-right:18px;
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+/* === Optional animation === */
+@keyframes blink {
+  to {
+    background-color: #BF616A;
+    color: #B5E8E0;
+  }
+}
