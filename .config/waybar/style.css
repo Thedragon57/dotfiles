@@ -24,9 +24,9 @@ window#waybar.hidden {
 #clock,
 #cpu,
 #memory,
-#disk,
+#custom-gpu,
 #temperature,
-#battery,
+#custom-gpu,
 #pulseaudio,
 #pulseaudio-slider,
 #network, 
@@ -42,8 +42,10 @@ window#waybar.hidden {
 /* Separation to the left */
 #custom-archicon,
 #cpu,
-#battery {
+#disk {
   margin-left: 5px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -120,7 +122,7 @@ window#waybar.hidden {
   color: #ECE4DA;
 }
 
-#disk {
+#custom-gpu {
   background: #3A3F4B;
   color: #C2A98B;
 }
@@ -184,7 +186,7 @@ window#waybar.hidden {
   background: rgba(34, 36, 54, 0.5);
 }
 
-#battery {
+#disk {
   background: #8A735C;
   color: #ECE4DA;
   padding-right: 15px;
